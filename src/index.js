@@ -4,12 +4,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import bookListReducers from './reducers';
+import taskListReducers from './reducers';
 import App from './containers/App';
 import './index.css';
 
 const store = createStore(
-  bookListReducers, // need to refactor this, but to what?
+  taskListReducers, // need to refactor this, but to what?
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
