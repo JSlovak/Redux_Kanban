@@ -15,7 +15,7 @@ const tasks = (state = initialState, action) => {
   switch(action.type){
     case LOAD_TASKS:
       return Object.assign({}, state, {
-        tasks. action.tasks
+        tasks: action.tasks
       });
 
     default:
