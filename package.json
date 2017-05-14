@@ -1,0 +1,30 @@
+{
+  "name": "Redux_Kanban",
+  "version": "1.0.0",
+  "description": "Refactor Kanban Board with Redux methodology / design",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JSlovak/Redux_Kanban.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JSlovak/Redux_Kanban/issues"
+  },
+  "homepage": "https://github.com/JSlovak/Redux_Kanban#readme",
+  "devDependencies": {
+    "react-scripts": "^0.9.5",
+    "redux-devtools": "^3.4.0"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0"
+  }
+}
