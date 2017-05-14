@@ -3,9 +3,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import TaskList from '../../components/TaskList';
-import NewTaskForm from '../NewBookForm';
+// import NewTaskForm from '../NewTaskForm';
 import { getTasksFromFakeXHR } from '../../lib/tasks.db';
-import { loadTask } from '../../actions';
+import { loadTasks } from '../../actions';
 
 
 import './styles.css';
@@ -17,48 +17,40 @@ class App extends Component {
     // do your shit after parent is done doing their shit
 
     this.title = 'React Kanban Board';
-
-    // set the initial state of THIS COMPONENT
-    // in the constructor
-    // this.state = {
-    //   books : [],
-    //   filter : ''
-    // };
-
   }
 
   // life cycle hook
   // before rendering this component
   componentWillMount(){
-    getBooksFromFakeXHR()
+    getTasksFromFakeXHR()
       .then( tasks => {
+        console.log(tasks);
         this.props.loadTasks( tasks );
-        // this.setState({ books });
+        //this.setState({ tasks });
       });
   }
 
-  // addBook = ( book ) => {
-  //   // addBookToFakeXHR( book )
-  //   //   .then( books => {
-  //   //     this.setState({ books });
-  //   //   });
-  //   this.props.addBook( book );
-  // }
-
   render() {
+    console.log("App check" + this.props.tasks);
     return (
       <div className="App">
         <div className="App-header">
-          <h2>Redux Kanban Board</h2>
+          <h1>REDUX KANBAN BOARD</h1>
         </div>
-        <BookList tasks={this.props.tasks} />
-        <NewTaskForm addTask={this.addTask} />
+        <TaskList tasks={this.props.tasks} />
+        <TaskList tasks={this.props.tasks} />
+        <TaskList tasks={this.props.tasks} />
+
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
+  // state.tasks.forEach(curr => {
+  //   console.log(curr);
+  // });
+  //console.log("App test state:" + state.tasks);
   return {
     tasks: state.tasks
   };

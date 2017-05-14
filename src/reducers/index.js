@@ -1,16 +1,17 @@
 /*jshint esversion: 6 */
 
 import {
+  LOAD_TASKS
 
-} from '.../actions';
+} from '../actions';
 
 const initialState = {
   tasks: []
 };
 
 const tasks = (state = initialState, action) => {
-  console.log('state', state);
-  console.log('action', action);
+  // console.log('state', state);
+  // console.log('action', action);
 
   switch(action.type){
     case LOAD_TASKS:
@@ -23,6 +24,8 @@ const tasks = (state = initialState, action) => {
   }
 
 };
+
+export default tasks;
 
 // GUIDE FROM CLASS EXERCISE
 

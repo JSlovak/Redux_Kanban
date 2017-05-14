@@ -3,18 +3,17 @@
 import React from 'react';
 import Task from './Task';
 
-const TaskList = ({ tasks }) => (
-  <ul>
+const TaskList = ({ tasks }) => {
+  console.log("TaskList:" + tasks);
+ return ( <ul>
     {
-      tasks.map( ({ }) =>
-        <Task
-          // key={_id}
-          // title={title}
-          // author={author}
+      tasks.map((task) =>
+        <Task key={task.task_id} task={task}
         />
       )
     }
   </ul>
-);
+  )
+};
 
-export default TookList;
+export default TaskList;

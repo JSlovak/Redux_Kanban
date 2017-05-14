@@ -2,10 +2,10 @@
 
 import React from 'react';
 
-const Task = ({ props }) => (
+const Task = ({ task }) => (
   <li>
-    // <h3>{ title }</h3>
-    // <p>{ author }</p>
+    <h3>{ task.assigned_to }</h3>
+    <p>{ task.title }</p>
   </li>
 );
 
