@@ -19,7 +19,7 @@ class NewTaskForm extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    this.props.addBook(this.state);
+    this.props.addTask(this.state);
 
     this.setState({
       title: " ",
@@ -62,10 +62,10 @@ class NewTaskForm extends Component {
           <input type="text" placeholder="Title" value={this.state.title} onChange={this.handleChangeTitle} />
         </div>
         <div>
-          <input type="text" placeholder="Assigned To" value={this.state.author} onChange={this.handleChangeAuthor} />
+          <input type="text" placeholder="Assigned To" value={this.state.assigned_to} onChange={this.handleChangeAuthor} />
         </div>
         <div>
-          <input type="text" placeholder="Staus" value={this.state.author} onChange={this.handleChangeAuthor} />
+          <input type="text" placeholder="Status" value={this.state.status} onChange={this.handleChangeAuthor} />
         </div>
         <div>
           <button type="submit">Add Task</button>

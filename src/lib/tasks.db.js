@@ -47,10 +47,10 @@ export const getTasksFromFakeXHR = () => new Promise((resolve, reject) => {
   setTimeout(() => resolve(tasksFromFakeDB), 500);
 });
 
-// export const addTaskToFakeXHR = (task) => new Promise((resolve, reject) => {
-//   setTimeout(() => {
-//     task._id = Math.random();
-//     tasksFromFakeDB.push(task);
-//     resolve(tasksFromFakeDB);
-//   }, 500);
-// });
+export const addTaskToFakeXHR = (task) => new Promise((resolve, reject) => {
+  setTimeout(() => {
+    task.task_id = Math.random();
+    tasksFromFakeDB.push(task);
+    resolve(tasksFromFakeDB);
+  }, 500);
+});

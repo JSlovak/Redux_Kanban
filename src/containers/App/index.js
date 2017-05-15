@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import TaskList from '../../components/TaskList';
-// import NewTaskForm from '../NewTaskForm';
+import NewTaskForm from '../NewTaskForm';
 import { getTasksFromFakeXHR } from '../../lib/tasks.db';
 import { loadTasks } from '../../actions';
 
@@ -36,6 +36,9 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <h1>REDUX KANBAN BOARD</h1>
+        </div>
+        <div id="New Task">
+          <NewTaskForm addTask={this.addTask} />
         </div>
         <TaskList tasks={this.props.tasks} />
         <TaskList tasks={this.props.tasks} />

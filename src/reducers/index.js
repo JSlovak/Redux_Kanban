@@ -1,7 +1,8 @@
 /*jshint esversion: 6 */
 
 import {
-  LOAD_TASKS
+  LOAD_TASKS,
+  ADD_TASK
 
 } from '../actions';
 
@@ -17,6 +18,11 @@ const tasks = (state = initialState, action) => {
     case LOAD_TASKS:
       return Object.assign({}, state, {
         tasks: action.tasks
+      });
+
+    case ADD_TASK:
+      return Object.assign({}, state, {
+        tasks : state.tasks.concat(action.tasks)
       });
 
     default:
