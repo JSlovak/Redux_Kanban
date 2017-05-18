@@ -12,10 +12,12 @@ const initialState = {
 
 const tasks = (state = initialState, action) => {
   // console.log('state', state);
-  // console.log('action', action);
-
+  console.log('action', action);
+  console.log(LOAD_TASKS);
   switch(action.type){
+
     case LOAD_TASKS:
+      console.log(action.tasks);
       return Object.assign({}, state, {
         tasks: action.tasks
       });

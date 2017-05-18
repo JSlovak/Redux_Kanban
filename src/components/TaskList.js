@@ -4,11 +4,11 @@ import React from 'react';
 import Task from './Task';
 
 const TaskList = ({ tasks }) => {
-  console.log("TaskList:" + tasks);
- return ( <ul>
+  console.log(tasks);
+ return ( <ul className='task-list'>
     {
       tasks.map((task) =>
-        <Task key={task.task_id} task={task}
+        <Task task={task}
         />
       )
     }

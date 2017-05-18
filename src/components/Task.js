@@ -3,7 +3,8 @@
 import React from 'react';
 
 const Task = ({ task }) => (
-  <li>
+  <li className='task-card'>
+    <img className='tack' src='tack.png' alt='tack'></img>
     <h3>{ task.assigned_to }</h3>
     <p>{ task.title }</p>
   </li>

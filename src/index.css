@@ -1,7 +1,57 @@
 /*jshint esversion: 6 */
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: sans-serif;
+}
+
+.App-header {
+  background-color: black;
+  height: 10%;
+
+
+}
+
+.NewTask {
+  background-color: black;
+  padding: 15px;
+  margin: 15px;
+  box-shadow: 3px 3px 5px black;
+}
+
+.Status-header {
+  align-self: center;
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  background-image: url(http://img12.deviantart.net/f280/i/2009/183/3/6/dark_wood_wallpaper__3360x1050_by_trapd00r.png);
+  color: white;
+  font-size: 60px;
+  -webkit-text-stroke: 3px black;
+  box-shadow: 3px 3px 5px black;
+}
+
+.App-body {
+  background-image: url("https://previews.123rf.com/images/aaronamat/aaronamat1102/aaronamat110200138/8769942-useful-brown-corkboard-texture-extreme-closeup-photo-Stock-Photo.jpg");
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.task-list {
+  padding: 10px;
+}
+
+.task-card {
+  background-color: white;
+  box-shadow: 3px 3px 5px black;
+  margin:15px;
+  padding: 15px;
+  height: 200px;
+  width: 200px;
+}
+
+.tack {
+  height: 65px;
+  width: 45px;
 }

@@ -6,6 +6,7 @@ export const LOAD_TASKS = 'LOAD_TASKS';
 export const ADD_TASK = 'ADD_TASK';
 
 export const loadTasks = tasks => {
+  console.log(tasks);
   return {
     type: LOAD_TASKS,
     tasks

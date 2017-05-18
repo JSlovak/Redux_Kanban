@@ -14,6 +14,7 @@ class App extends Component {
   constructor(props){
     // give props to your parents
     super(props);
+    console.log(this.props);
     // do your shit after parent is done doing their shit
 
     this.title = 'React Kanban Board';
@@ -24,7 +25,6 @@ class App extends Component {
   componentWillMount(){
     getTasksFromFakeXHR()
       .then( tasks => {
-        console.log(tasks);
         this.props.loadTasks( tasks );
         //this.setState({ tasks });
       });
@@ -35,15 +35,22 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h1>REDUX KANBAN BOARD</h1>
+          <NewTaskForm className="NewTask" addTask={this.addTask} />
         </div>
-        <div id="New Task">
-          <NewTaskForm addTask={this.addTask} />
+        <div className="App-body">
+          <div className="column">
+            <h1 className="Status-header">TO DO</h1>
+            <TaskList tasks={this.props.tasks} />
+          </div>
+          <div className="column">
+            <h1 className="Status-header" >DOING</h1>
+            <TaskList tasks={this.props.tasks} />
+          </div>
+          <div className="column">
+            <h1 className="Status-header" >DONE</h1>
+            <TaskList tasks={this.props.tasks} />
+          </div>
         </div>
-        <TaskList tasks={this.props.tasks} />
-        <TaskList tasks={this.props.tasks} />
-        <TaskList tasks={this.props.tasks} />
-
       </div>
     );
   }
@@ -64,10 +71,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     loadTasks: tasks => {
       dispatch(loadTasks(tasks))
     }
-    // },
-    // addBook: book => {
-    //   dispatch(addBook(book))
-    // }
+
   }
 }
 
